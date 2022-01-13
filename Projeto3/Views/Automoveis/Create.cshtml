@@ -1,0 +1,42 @@
+﻿@model Projeto3.Models.AutomoveisFormViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Veiculos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Automoveis.Modelo" class="control-label"></label>
+                <input asp-for="Automoveis.Modelo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Automoveis.AnoFabricacao" class="control-label"></label>
+                <input asp-for="Automoveis.AnoFabricacao" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Automoveis.ValorAluguel" class="control-label"></label>
+                <input asp-for="Automoveis.ValorAluguel" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Automoveis.Locadora" class="control-label"></label>
+                <input asp-for="Automoveis.Locadora" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Automoveis.LocadoraId" class="control-label"></label>
+                <select asp-for="Automoveis.LocadoraId" asp-items="@(new SelectList(Model.Locadoras,"Id", "Name"))" class="form-control"></select>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model Projeto3.Models.Automoveis
+
+@{ 
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Tem certeza que deseja DELETAR ?</h3>
+
+<div>
+    <h4>Automoveis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoFabricacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnoFabricacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorAluguel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorAluguel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locadora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Locadora)
+        </dd>
+
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-danger"/>
+        <a asp-action="Index">Voltar para List </a>
+    </form>
+
+</div>
